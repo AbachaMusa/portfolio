@@ -17,7 +17,7 @@
             padding: 12px;
         }
         .firstdiv {
-            background-color: antiquewhite;
+            background-color: green;
             border-radius: 12px 0 12px;
         }
 
@@ -32,7 +32,7 @@
         }
 
         .about p{
-            color: black;
+            color: white;
             font-style: oblique;
             font-size: larger;
             padding: 12px;
@@ -63,18 +63,22 @@
         }
 
         .content {
-            background-color: coral;
+            background-color: gray;
         }
 
         .content a {
             text-decoration: none;
-            color: black;
+            color: white;
+        }
+
+        .content li {
+            color: white;
         }
 
         .content a:hover{
             text-decoration: underline;
-            background-color: #818181;
-            color: pink;
+            background-color: black;
+            color: white;
         }
 
         @media (min-width: 768px) {
@@ -85,7 +89,7 @@
                 z-index: 1;
                 top: 0;
                 left: 0;
-                background-color: coral;
+                background-color: gray;
                 overflow-x: hidden;
                 padding-top: 20px;
             }
@@ -98,7 +102,7 @@
                 display: block;
             }
 
-            .section, .firstdiv {
+            .section, .firstdiv, .skillshead {
                 margin-left: 260px; /* Same as the width of the sidenav */
                 font-size: 28px; /* Increased text to enable scrolling */
                 padding: 0px 10px;
@@ -110,6 +114,15 @@
                 -webkit-transform: translateY(-50%);
                 -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
+            }
+
+            .about img {
+                width: 50%;
+                height: 100%;
+                float: left;
+                z-index: 99;
+                margin: 12px;
+                border-radius: 50%;
             }
         }
 
@@ -153,6 +166,26 @@
             background-color: rgb(43, 206, 67);
             color: white;
         }
+
+        .skillshead {
+            background-color: #007bb5;
+        }
+
+        .skills {
+            background-color: #007bb5;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .skills h3{
+            border-radius: 12px;
+            border-style: groove;
+            margin: 12px;
+            padding: 5px;
+            z-index: 99;
+            background-color: white;
+        }
     </style>
 </head>
 <body>
@@ -186,10 +219,32 @@
         </div>
     </div>
 
-    <h2>Portfolio Samples</h2>
+    <div class="skillshead">
+        <h2>Skills and expertise</h2>
+
+        <div class="skills">
+            <h3><span>Authentication</span></h3>
+            <h3><span>Cybersecurity assessment</span></h3>
+            <h3><span>Information assurance</span></h3>
+            <h3><span>Information security</span></h3>
+            <h3><span>Information system</span></h3>
+            <h3><span>Instrusion detection & IDS tools</span></h3>
+            <h3><span>Linux</span></h3>
+            <h3><span>Network analyzer <em>sniffing</em> tools</span></h3>
+            <h3><span>Network securiy</span></h3>
+            <h3><span>NIST cybersecurity framework</span></h3>
+            <h3><span>Python</span></h3>
+            <h3><span>Risk assessment</span></h3>
+            <h3><span>Risk management framework</span></h3>
+            <h3><spna>Security information and event management (SIEM) tools</spna></h3>
+            <h3><span>SQL</span></h3>
+            <h3><span>Threat analysis</span></h3>
+            <h3><span>Vulnerability assessment</span></h3>
+        </div>
+    </div>
 
     <div class="content">
-        <h4>Portfolio Samples</h4>
+        <h2>Portfolio Samples</h2>
         <ul>
             <li><a href="#section-1">Drafting a professional statement</a></li>
             <li><a href="#section-2">Conducting a security audit</a></li>
