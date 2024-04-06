@@ -12,16 +12,16 @@
             padding: 0;
             margin: 0;
         }
-        .firsth3div {
+        .first-bg {
             background-image: url(image/cybersecurity.jpeg);
             padding: 12px;
         }
         .firstdiv {
-            background-color: green;
+            background-color: #007bb5;
             border-radius: 12px 0 12px;
         }
 
-        .firstdiv h3{
+        .firsth3{
             color: white;
             text-shadow: 0 2px 0 red;
             text-align: center;
@@ -33,8 +33,9 @@
 
         .about p{
             color: white;
-            font-style: oblique;
-            font-size: larger;
+            font-style: normal;
+            padding: 12px;
+            font-weight: bold;
             padding: 12px;
         }
 
@@ -63,47 +64,72 @@
         }
 
         .content {
-            background-color: gray;
+            box-sizing: content-box;
+            box-shadow: 12px 12px black;
+            margin: 12px;
+            padding: 12px;
         }
 
         .content a {
             text-decoration: none;
-            color: white;
+            color: black;
         }
 
         .content li {
-            color: white;
+            color: black;
+            padding-top: 5px;
         }
 
         .content a:hover{
             text-decoration: underline;
-            background-color: black;
-            color: white;
+            background-color: rgb(151, 136, 136);
+            color: blue;
         }
 
         @media (min-width: 768px) {
             .content {
                 height: 100%;
-                width: 260px;
+                width: 280px;
                 position: fixed;
                 z-index: 1;
                 top: 0;
                 left: 0;
-                background-color: gray;
+                background-color: black;
                 overflow-x: hidden;
                 padding-top: 20px;
+                margin-top: 30px;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            .content a {
+                color: white;
+            }
+
+            .content h2 {
+                top: 0;
+                margin: 0;
+                position: fixed;
+                background-color: green;
+                color: white;
             }
 
             .content ul {
                 padding: 6px 8px 6px 16px;
                 text-decoration: none;
                 font-size: 25px;
-                color: #818181;
+                color: white;
                 display: block;
             }
 
-            .section, .firstdiv, .skillshead {
-                margin-left: 260px; /* Same as the width of the sidenav */
+            .content li {
+                color: white;
+                padding-top: 15px;
+            }
+
+            .section, .firstdiv {
+                margin-left: 280px; /* Same as the width of the sidenav */
                 font-size: 28px; /* Increased text to enable scrolling */
                 padding: 0px 10px;
             }
@@ -122,7 +148,7 @@
                 float: left;
                 z-index: 99;
                 margin: 12px;
-                border-radius: 50%;
+                border-style: groove;
             }
         }
 
@@ -186,12 +212,17 @@
             z-index: 99;
             background-color: white;
         }
+
+        hr {
+            color: blue;
+            text-decoration: dashed;
+        }
     </style>
 </head>
 <body>
     <div class="firstdiv">
-        <div class="firsth3div">
-            <h3>
+        <div class="first-bg">
+            <h3 class="firsth3">
                 This is my Cybersecurity professionals portfolios to demonstrate my security education, 
                 skills, and knowledge. 
             </h3>
@@ -217,34 +248,35 @@
                 to become security analyst.
             </p>
         </div>
-    </div>
 
-    <div class="skillshead">
-        <h2>Skills and expertise</h2>
-
-        <div class="skills">
-            <h3><span>Authentication</span></h3>
-            <h3><span>Cybersecurity assessment</span></h3>
-            <h3><span>Information assurance</span></h3>
-            <h3><span>Information security</span></h3>
-            <h3><span>Information system</span></h3>
-            <h3><span>Instrusion detection & IDS tools</span></h3>
-            <h3><span>Linux</span></h3>
-            <h3><span>Network analyzer <em>sniffing</em> tools</span></h3>
-            <h3><span>Network securiy</span></h3>
-            <h3><span>NIST cybersecurity framework</span></h3>
-            <h3><span>Python</span></h3>
-            <h3><span>Risk assessment</span></h3>
-            <h3><span>Risk management framework</span></h3>
-            <h3><spna>Security information and event management (SIEM) tools</spna></h3>
-            <h3><span>SQL</span></h3>
-            <h3><span>Threat analysis</span></h3>
-            <h3><span>Vulnerability assessment</span></h3>
+        <div class="skillshead">
+            <h2>Skills and expertise</h2>
+    
+            <div class="skills">
+                <h3><span>Authentication</span></h3>
+                <h3><span>Cybersecurity assessment</span></h3>
+                <h3><span>Information assurance</span></h3>
+                <h3><span>Information security</span></h3>
+                <h3><span>Information system</span></h3>
+                <h3><span>Instrusion detection & IDS tools</span></h3>
+                <h3><span>Linux</span></h3>
+                <h3><span>Network analyzer <em>sniffing</em> tools</span></h3>
+                <h3><span>Network securiy</span></h3>
+                <h3><span>NIST cybersecurity framework</span></h3>
+                <h3><span>Python</span></h3>
+                <h3><span>Risk assessment</span></h3>
+                <h3><span>Risk management framework</span></h3>
+                <h3><spna>Security information and event management (SIEM) tools</spna></h3>
+                <h3><span>SQL</span></h3>
+                <h3><span>Threat analysis</span></h3>
+                <h3><span>Vulnerability assessment</span></h3>
+            </div>
         </div>
     </div>
 
+    <hr><hr>
     <div class="content">
-        <h2>Portfolio Samples</h2>
+        <h2>Portfolio Samples &#128071;</h2>
         <ul>
             <li><a href="#section-1">Drafting a professional statement</a></li>
             <li><a href="#section-2">Conducting a security audit</a></li>
@@ -257,6 +289,8 @@
             <li><a href="#section-9">Importing and parsing a text file in a security-related scenario</a></li>
         </ul>
     </div>
+    <hr><hr>
+
 
     <div class="section">
         <h2 id="section-1">A professional statement</h2>
@@ -372,7 +406,7 @@
         </p>
         <div class="icon-bar">
             <a href="https://api.whatsapp.com/send?phone=+2348145885154&text=hello Abacha" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
-            <a href="https://x.com/super__Ab?t=LZEuReTx9G3BzULuuhX_zg&s=09" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="https://twitter.com/home" class="twitter"><i class="fa fa-twitter"></i></a> 
             <a href="https://www.linkedin.com/in/abacha-musa-051528261/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BxKa2JeYgRISU2ZfhJAk%2FdQ%3D%3D" class="linkedin"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.instagram.com/ab__boi/" class="instagram"><i class="fa fa-instagram"></i></a> 
         </div>   
