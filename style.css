@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #ffffff; /* white */
+  }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*header start*/
+.hidden {
+  display: none;
+  text-decoration: none;
+  color: ffffff;
+  font-size: 30PX;
+}
+
+#mobile .fa {
+  color: #ffffff;
+}
+
+.fa {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.fa:hover,
+.active {
+  color: #00ffff; /* cyan */
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: #003366; /*Dark blue*/
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.mylogo {
+  color: #ffffff; /* White*/
+  font-size: larger;
+  text-decoration: none;
+  font-style: oblique;
+  font-weight: 700;
+}
+
+.mylogo span {
+ font-size: 50px;
+}
+
+#navbar {
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a, .dropbtn, .dropbtn i {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+
+.dropdown {
+  border: none;
+  float: left;
+  overflow: hidden;
+  background-color: #003366; /*DFark blue*/;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  border: none;
+  background-color: #003366; /*Dark blue*/;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content {
+  overflow-x: auto;
+  height: 250px;
+  border: 1px solid #ccc;
+  background-color: #003366; /*Dark blue*/;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    position: relative;
+    float: none;
+    margin: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content.show {
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  color: #00ffff; /* cyan*/
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #00ffff; /* cyan*/
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #00ffff; /*cyan*/
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+  margin: 20px;
+}
+
+#close {
+  display: none;
+}
+
+/*targets larger phones and tablets*/
+@media (max-width:799px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #003366;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 88px 0 0 10px;
+    transition: 0.3s;
+    height: 100vh; /* Full viewport height */
+    overflow-y: scroll; /* Enables vertical scrolling */
+  }
+
+  .dropdown-content {
+    display: none;
+  }
+  .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: relative;
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i {
+    color: #ffffff;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #ffffff;
+    font-size: 24px;
+  }
+
+ #lg-bag {
+    display: none;
+  }
+}
+
+/*mobile phones and some smaller tablets*/
+@media (max-width: 477px) {
+  #navbar {
+    z-index: 9999;
+    height: 100vh; /* Full viewport height */
+    overflow-y: scroll; /* Enables vertical scrolling */
+  }
+
+  #header {
+    padding: 10px 30px;
+  }
+
+  .dropdown-content.show {
+    display: block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: relative;
+    min-width: 160px;
+    z-index: 1;
+  }
+}
+
+/*large desktops and wide-screen monitors.*/
+@media (min-width: 1200px) {
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+/*End of Header*/
+
+
+
+.content {
+    margin: 0;
+}
+
+.hero-bg {
+    background-image: url(cybersecurity.jpeg);
+    margin: 15px 0 15px 0;
+    padding: 12px;
+}
+
+.hero-bg h3 {
+    text-align: center;
+    font-weight: 700;
+    padding: 12px;
+    color: #ffffff;
+    text-shadow: 
+      0 0 10px rgba(0, 255, 0.5),
+      0 0 20px rgba(0, 255, 0.5),
+      0 0 30px rgba(0, 255, 0.5),
+      0 0 40px rgba(0, 255, 0.8);
+}
+
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.about h2 {
+    color: #008080;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-style: groove;
+    border-radius: 30px;
+}
+
+.about img {
+    width: 100%;
+    height: auto;
+}
+
+.about p {
+    padding: 0;
+    margin: 12px;
+    font-family: 'Georgia', serif; /* Choose a poetic, elegant font */
+    color: #333; /* Neutral text color */
+    line-height: 1.8; /* Better readability */
+}
+
+@media screen and (min-width: 1024px) {
+    .about img {
+        width: 50%;
+        height: auto;
+        float: left;
+        border-style: groove;
+        margin: 10px;
+    }
+
+    .about p {
+        font-size: 20px;
+    }
+
+    .skillshead {
+        clear: both;
+    }
+}
+
+.skillshead {
+    background-color: #003366;
+    padding: 12px;
+}
+
+.skillshead h2 {
+    color: #00ffff;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    border-style: groove;
+    border-radius: 30px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 15px;
+    gap: 10px;
+}
+
+.skills h3 {
+    background-color: #39ff14; /*neon green*/
+    padding: 10px;
+    margin: 0;
+    border-style: groove;
+    text-align: 10;
+}
+
+.portfolio-sample {
+    margin-top: 30px;
+}
+
+.portfolio-sample h2 {
+    text-align: center;
+    padding-top: 12px;
+}
+
+.section p {
+    padding: 0;
+    margin: 12px;
+    font-family: 'Georgia', serif; /* Choose a poetic, elegant font */
+    line-height: 1.8; /* Better readability */
+}
+
+
+
+footer {
+    margin-top: 30px;
+    background-color: #003366;
+    text-align: center;
+}
+
+.icon-bar {
+    text-align: center;
+    padding: 30px;
+}
+
+.icon-bar a {
+    display: inline;
+    text-align: center;
+    margin: 15px;
+}
+
+.icon-bar p{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.icon-bar a:hover {
+    background-color: #00ffff;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: #ffffff;
+}
+
+.linkedin {
+    background: #007bb5;
+    color: #ffffff;
+}
+
+.instagram {
+    background: #bb0000;
+    color: #ffffff;
+}
+
+.whatsapp {
+    background-color: rgb(43, 206, 67);
+    color: #ffffff;
+}
