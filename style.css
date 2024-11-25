@@ -360,10 +360,10 @@ html {
 
 .skills h3 {
     background-color: #39ff14; /*neon green*/
-    padding: 10px;
-    margin: 0;
+    
+    
     border-style: groove;
-    text-align: 10;
+    text-align: center;
 }
 
 .portfolio-sample {
